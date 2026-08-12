@@ -8,7 +8,6 @@ import java.util.Scanner;
 import studio.paperwing.text_adventure.JavaSimpleContainer.JscGroup;
 import studio.paperwing.text_adventure.JavaSimpleContainer.JscPair;
 import studio.paperwing.text_adventure.JavaSimpleContainer.JscReader;
-import studio.paperwing.text_adventure.JavaSimpleContainer.JscWriter;
 
 public class Game {
     private static HashMap<String, Decision> decisionMap = new HashMap<>();
@@ -17,7 +16,7 @@ public class Game {
 
     private static Scanner scan;
     private static JscReader reader = new JscReader("/src/main/resources/gameData", ".jsc");
-    private static JscWriter writer = new JscWriter("/text-adventure", ".jsc");
+    // private static JscWriter writer = new JscWriter("/text-adventure", ".jsc");
     
     private static boolean created = false;
     private static boolean closeGame = false;
@@ -49,11 +48,6 @@ public class Game {
             Decision decision = new Decision(root.getID());
 
             // parse the description tag and put its value into the description.
-            JscPair pair = root.getPair("description");
-            if (pair == null) {
-                throw new NullPointerException("The pair \"description\" could not be found.");
-            }
-            
             decision.setDescription(root.getPair("description").getValue());
 
             // parse the response
