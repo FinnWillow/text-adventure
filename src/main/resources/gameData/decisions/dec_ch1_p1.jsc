@@ -1,0 +1,22 @@
+description =
+    Lost behind an endless smog of polluted air and endless fog sits the city Drawg. And just like its people, it\n
+    is loud and smelly. The sun has such a hard time breaching through the pale grey sky that when it does we\n
+    celebrate it. And when we don't, we steal, break stuff, and scream at each other for no reason. Well, some of\n
+    us DO have a reason, being survival, like myself, but the rich heads of empowered families, or children of\n
+    entitled politicians, more often than not line their pockets without a care in the word. So, we often take it\n
+    upon ourselves to make an example of what this place is.
+;
+
+response {
+    1 = Continue;
+}
+
+action {
+    1 = SAY tap.;
+    1 = WAIT 1000;
+    1 = SAY tap..;
+    1 = WAIT 1000;
+    1 = SAY tap...;
+    1 = WAIT 1000;
+    1 = GOTO dec_ch1_p2;
+}

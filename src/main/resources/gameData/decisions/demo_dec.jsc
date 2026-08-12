@@ -1,0 +1,18 @@
+description =
+    This is a description.
+    
+    If everything worked correctly this MUST be the result in the console.
+;
+
+response {
+    1 = it is!;
+    2 = is not.;
+}
+
+action {
+    1 = SAY yes it is!;
+    1 = CLOSE;
+    
+    2 = SAY no, it is not.;
+    2 = CLOSE;
+}

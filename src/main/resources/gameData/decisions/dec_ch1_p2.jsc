@@ -1,0 +1,22 @@
+description =
+    There are some bandits here.\n
+    \n
+    What should I do?\n
+;
+
+response {
+    1 = Fight them;
+
+    2 = Run away;
+
+    3 = Do nothing;
+}
+
+action {
+    1 = GOTO dec_ch1_p3_fight;
+
+    2 = GOTO dec_ch1_p3_run;
+
+    3 = GOTO dec_ch1_p3_nothing;
+    3 = ATTACK e::player e::bandits;
+}

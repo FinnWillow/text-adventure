@@ -1,0 +1,34 @@
+{
+    "name": "jsc-syntax",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "contributes": {
+        "languages": [{
+            "id": "jsc-syntax",
+            "aliases": [
+                "jsc"
+            ],
+            "extensions": [
+                ".jsc"
+            ],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [
+            {
+                "language": "jsc-syntax",
+                "scopeName": "source.jsc-syntax",
+                "path": "./syntaxes/jsc.tmLanguage.json"
+            }
+        ],
+        "configurationDefaults": {
+            "editor.tokenColorCustomizations": {
+                "textMateRules": [
+                    { "scope" : "entity.name.tag.jsc", "settings": { "foreground": "#73a47c" } },
+                    { "scope" : "keyword.operator.jsc", "settings": { "foreground": "#a1a1a1" } }
+                ]
+            }
+        }
+    }
+}

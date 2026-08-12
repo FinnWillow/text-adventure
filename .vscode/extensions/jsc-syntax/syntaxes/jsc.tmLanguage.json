@@ -1,0 +1,43 @@
+{
+    "scopeName" : "source.jsc-syntax",
+    "patterns" : [
+        { "include": "#pair" },
+        { "include": "#group" } 
+    ],
+    "repository": {
+        "pair": {
+            "begin" : "([A-Za-z0-9]+)\\s*(=)",
+            "beginCaptures" : {
+                "1" : { "name" : "entity.name.tag.jsc" },
+                "2" : { "name" : "keyword.operator.jsc" }
+            },
+            "end" : "(;)",
+            "endCaptures" : {
+                "1" : { "name" : "punctuation.terminator.jsc"}
+            },
+            "contentName" : "string.unquoted.jsc",
+            "patterns" : [
+                {
+                    "match" : "\\\\n",
+                    "name" : "constant.character.escape.jsc"
+                }
+            ]
+        },
+
+        "group": {
+            "begin" : "([A-Za-z0-9]+)\\s*(\\{)",
+            "beginCaptures" : {
+                "1" : { "name" : "entity.name.tag.jsc" },
+                "2" : { "name" : "punctuation.definition.jsc" }
+            },
+            "end" : "(\\})",
+            "endCaptures" : {
+                "1" : { "name" : "punctuation.definition.jsc" }
+            },
+            "patterns": [
+                { "include" : "#pair" },
+                { "include" : "#group" }
+            ]
+        }
+    }
+}

@@ -1,0 +1,26 @@
+coin {
+    desc = Used to buy other items.;
+    buyAmount = 0;
+    sellAmount = 0;
+    durability = -1;
+    stack = 1;
+    stackMax = 999;
+}
+
+knife {
+    desc = Deal a bit of dammage to your enemy.;
+    buyAmount = 20;
+    sellAmount = 10;
+    durability = 5;
+    stack = 1;
+    stackMax = 3;
+}
+
+bread {
+    desc = Restore a bit of health when eating it.;
+    buyAmount = 3;
+    sellAmount = 0;
+    durability = 1;
+    stack = 1;
+    stackMax = 5;
+}
